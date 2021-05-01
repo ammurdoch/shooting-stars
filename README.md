@@ -19,19 +19,6 @@ positions {
   "center-defender": "Stella",
   "goalie": "Ella"
 }
-play_times {
-  "Ella": 0,
-  "Aymeri": 0,
-  "Evelyn": 0,
-  "Gracelyn": 0,
-  "Hartley": 0,
-  "Kara": 0,
-  "Lacey": 0,
-  "Lanae": 0,
-  "Stella": 0,
-  "Tegan": 0,
-  "Inara": 0
-}
 ```
 # 1st Sub
 ```
@@ -50,19 +37,6 @@ positions {
   "center-mid": "Hartley",
   "center-defender": "Gracelyn",
   "goalie": "Ella"
-}
-play_times {
-  "Ella": 5,
-  "Aymeri": 0,
-  "Evelyn": 5,
-  "Gracelyn": 0,
-  "Hartley": 0,
-  "Kara": 5,
-  "Lacey": 5,
-  "Lanae": 5,
-  "Stella": 5,
-  "Tegan": 5,
-  "Inara": 0
 }
 ```
 # 2nd Sub
@@ -83,19 +57,6 @@ positions {
   "center-defender": "Kara",
   "goalie": "Ella"
 }
-play_times {
-  "Ella": 10,
-  "Aymeri": 5,
-  "Evelyn": 5,
-  "Gracelyn": 5,
-  "Hartley": 5,
-  "Kara": 5,
-  "Lacey": 10,
-  "Lanae": 10,
-  "Stella": 5,
-  "Tegan": 5,
-  "Inara": 5
-}
 ```
 # 2nd Half
 ```
@@ -114,19 +75,6 @@ positions {
   "center-mid": "Hartley",
   "center-defender": "Inara",
   "goalie": "Gracelyn"
-}
-play_times {
-  "Ella": 15,
-  "Aymeri": 10,
-  "Evelyn": 10,
-  "Gracelyn": 5,
-  "Hartley": 5,
-  "Kara": 10,
-  "Lacey": 10,
-  "Lanae": 15,
-  "Stella": 10,
-  "Tegan": 10,
-  "Inara": 5
 }
 ```
 # 3rd Sub
@@ -147,19 +95,6 @@ positions {
   "center-defender": "Inara",
   "goalie": "Gracelyn"
 }
-play_times {
-  "Ella": 15,
-  "Aymeri": 15,
-  "Evelyn": 10,
-  "Gracelyn": 10,
-  "Hartley": 10,
-  "Kara": 10,
-  "Lacey": 15,
-  "Lanae": 15,
-  "Stella": 15,
-  "Tegan": 15,
-  "Inara": 10
-}
 ```
 # 4th Sub
 ```
@@ -178,19 +113,6 @@ positions {
   "center-mid": "Hartley",
   "center-defender": "Inara",
   "goalie": "Gracelyn"
-}
-play_times {
-  "Ella": 20,
-  "Aymeri": 15,
-  "Evelyn": 15,
-  "Gracelyn": 15,
-  "Hartley": 10,
-  "Kara": 15,
-  "Lacey": 15,
-  "Lanae": 20,
-  "Stella": 20,
-  "Tegan": 15,
-  "Inara": 15
 }
 ```
 # Final Play Times
