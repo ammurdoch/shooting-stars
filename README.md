@@ -1,26 +1,23 @@
-# shooting-stars
-Soccer substitutions for today's game
-
-
-## Game Start
+# Game Start
 ```
-available_players ['Evelyn', 'Stella', 'Tegan', 'Lanae', 'Inara', 'Lacey', 'Hartley', 'Kara', 'Ella', 'Aymeri']
+(Ella --> )
+available_players ['Evelyn', 'Stella', 'Kara', 'Tegan', 'Lacey', 'Lanae', 'Gracelyn', 'Hartley', 'Aymeri', 'Inara']
 (Evelyn --> )
 (Stella --> )
+(Kara --> )
 (Tegan --> )
+(Lacey --> )
 (Lanae --> )
-(Inara --> )
-(Hartley --> )
-not placed ['Lacey', 'Kara', 'Ella', 'Aymeri']
-still not placed ['Lacey', 'Kara', 'Ella', 'Aymeri']
+not placed ['Gracelyn', 'Hartley', 'Aymeri', 'Inara']
+still not placed ['Gracelyn', 'Hartley', 'Aymeri', 'Inara']
 positions {
-  "left-forward": "Evelyn",
-  "right-forward": "Stella",
-  "left-defender": "Tegan",
-  "right-defender": "Lanae",
-  "center-mid": "Hartley",
-  "center-defender": "Inara",
-  "goalie": "Gracelyn"
+  "left-forward": "Lacey",
+  "right-forward": "Lanae",
+  "left-defender": "Kara",
+  "right-defender": "Tegan",
+  "center-mid": "Evelyn",
+  "center-defender": "Stella",
+  "goalie": "Ella"
 }
 play_times {
   "Ella": 0,
@@ -36,186 +33,179 @@ play_times {
   "Inara": 0
 }
 ```
-
-## First Sub
+# 1st Sub
 ```
-available_players ['Lacey', 'Kara', 'Aymeri', 'Ella']
-(Lacey --> Evelyn)
-(Kara --> Tegan)
-(Aymeri --> Stella)
-(Ella --> Lanae)
+available_players ['Gracelyn', 'Hartley', 'Aymeri', 'Inara']
+(Gracelyn --> Stella)
+(Hartley --> Evelyn)
+(Aymeri --> Kara)
+(Inara --> Tegan)
 not placed []
 still not placed []
 positions {
   "left-forward": "Lacey",
-  "right-forward": "Aymeri",
-  "left-defender": "Kara",
-  "right-defender": "Ella",
+  "right-forward": "Lanae",
+  "left-defender": "Aymeri",
+  "right-defender": "Inara",
   "center-mid": "Hartley",
-  "center-defender": "Inara",
-  "goalie": "Gracelyn"
-}
-play_times {
-  "Ella": 0,
-  "Aymeri": 0,
-  "Evelyn": 5,
-  "Gracelyn": 5,
-  "Hartley": 5,
-  "Kara": 0,
-  "Lacey": 0,
-  "Lanae": 5,
-  "Stella": 5,
-  "Tegan": 5,
-  "Inara": 5
-}
-```
-
-## 2nd Sub
-```
-available_players ['Lanae', 'Evelyn', 'Stella', 'Tegan']
-(Lanae --> Lacey)
-(Evelyn --> Hartley)
-(Stella --> Aymeri)
-(Tegan --> Kara)
-not placed []
-still not placed []
-positions {
-  "left-forward": "Lanae",
-  "right-forward": "Stella",
-  "left-defender": "Tegan",
-  "right-defender": "Ella",
-  "center-mid": "Evelyn",
-  "center-defender": "Inara",
-  "goalie": "Gracelyn"
+  "center-defender": "Gracelyn",
+  "goalie": "Ella"
 }
 play_times {
   "Ella": 5,
-  "Aymeri": 5,
+  "Aymeri": 0,
   "Evelyn": 5,
-  "Gracelyn": 10,
-  "Hartley": 10,
+  "Gracelyn": 0,
+  "Hartley": 0,
   "Kara": 5,
   "Lacey": 5,
   "Lanae": 5,
   "Stella": 5,
   "Tegan": 5,
-  "Inara": 10
+  "Inara": 0
 }
 ```
-
-## 2nd Half
+# 2nd Sub
 ```
-available_players ['Lacey', 'Gracelyn', 'Aymeri', 'Kara', 'Hartley']
-(Lacey --> )
-(Gracelyn --> Inara)
-(Aymeri --> Lanae)
-(Kara --> Tegan)
-(Hartley --> Stella)
-not placed []
+available_players ['Evelyn', 'Tegan', 'Kara', 'Stella']
+(Evelyn --> Hartley)
+(Tegan --> Inara)
+(Kara --> Gracelyn)
+not placed ['Stella']
+(Stella --> Lacey)
 still not placed []
 positions {
-  "left-forward": "Aymeri",
-  "right-forward": "Hartley",
-  "left-defender": "Kara",
-  "right-defender": "Lacey",
+  "left-forward": "Stella",
+  "right-forward": "Lanae",
+  "left-defender": "Aymeri",
+  "right-defender": "Tegan",
   "center-mid": "Evelyn",
-  "center-defender": "Gracelyn",
+  "center-defender": "Kara",
   "goalie": "Ella"
 }
 play_times {
   "Ella": 10,
   "Aymeri": 5,
-  "Evelyn": 10,
-  "Gracelyn": 15,
-  "Hartley": 10,
+  "Evelyn": 5,
+  "Gracelyn": 5,
+  "Hartley": 5,
   "Kara": 5,
-  "Lacey": 5,
+  "Lacey": 10,
   "Lanae": 10,
-  "Stella": 10,
-  "Tegan": 10,
-  "Inara": 15
+  "Stella": 5,
+  "Tegan": 5,
+  "Inara": 5
 }
 ```
-
-## 2nd Half 1st Sub
+# 2nd Half
 ```
-available_players ['Stella', 'Lanae', 'Inara', 'Tegan']
-(Stella --> Hartley)
-(Lanae --> Aymeri)
-(Inara --> Gracelyn)
-(Tegan --> Kara)
-not placed []
-still not placed []
+(Gracelyn --> Ella)
+available_players ['Inara', 'Hartley', 'Lacey', 'Ella']
+(Inara --> Kara)
+(Hartley --> Evelyn)
+(Lacey --> Lanae)
+not placed ['Ella']
+still not placed ['Ella']
 positions {
-  "left-forward": "Lanae",
-  "right-forward": "Stella",
-  "left-defender": "Tegan",
-  "right-defender": "Lacey",
-  "center-mid": "Evelyn",
+  "left-forward": "Stella",
+  "right-forward": "Lacey",
+  "left-defender": "Aymeri",
+  "right-defender": "Tegan",
+  "center-mid": "Hartley",
   "center-defender": "Inara",
-  "goalie": "Ella"
+  "goalie": "Gracelyn"
 }
 play_times {
   "Ella": 15,
   "Aymeri": 10,
-  "Evelyn": 15,
-  "Gracelyn": 20,
-  "Hartley": 15,
+  "Evelyn": 10,
+  "Gracelyn": 5,
+  "Hartley": 5,
   "Kara": 10,
   "Lacey": 10,
-  "Lanae": 10,
+  "Lanae": 15,
   "Stella": 10,
   "Tegan": 10,
-  "Inara": 15
+  "Inara": 5
 }
 ```
-
-## 2nd Half 2nd Sub
+# 3rd Sub
 ```
-available_players ['Gracelyn', 'Aymeri', 'Kara', 'Hartley']
-(Gracelyn --> Inara)
-(Aymeri --> Evelyn)
-(Kara --> Tegan)
-(Hartley --> Lanae)
+available_players ['Kara', 'Ella', 'Lanae', 'Evelyn']
+(Kara --> Aymeri)
+(Ella --> Tegan)
+(Lanae --> Lacey)
+(Evelyn --> Hartley)
 not placed []
 still not placed []
 positions {
-  "left-forward": "Hartley",
-  "right-forward": "Stella",
+  "left-forward": "Stella",
+  "right-forward": "Lanae",
   "left-defender": "Kara",
-  "right-defender": "Lacey",
-  "center-mid": "Aymeri",
-  "center-defender": "Gracelyn",
-  "goalie": "Ella"
+  "right-defender": "Ella",
+  "center-mid": "Evelyn",
+  "center-defender": "Inara",
+  "goalie": "Gracelyn"
 }
 play_times {
-  "Ella": 20,
-  "Aymeri": 10,
-  "Evelyn": 20,
-  "Gracelyn": 20,
-  "Hartley": 15,
+  "Ella": 15,
+  "Aymeri": 15,
+  "Evelyn": 10,
+  "Gracelyn": 10,
+  "Hartley": 10,
   "Kara": 10,
   "Lacey": 15,
   "Lanae": 15,
   "Stella": 15,
   "Tegan": 15,
-  "Inara": 20
+  "Inara": 10
 }
 ```
-
-# Final play times
+# 4th Sub
 ```
+available_players ['Tegan', 'Aymeri', 'Lacey', 'Hartley']
+(Tegan --> Kara)
+(Aymeri --> Ella)
+(Lacey --> Lanae)
+(Hartley --> Evelyn)
+not placed []
+still not placed []
+positions {
+  "left-forward": "Stella",
+  "right-forward": "Lacey",
+  "left-defender": "Tegan",
+  "right-defender": "Aymeri",
+  "center-mid": "Hartley",
+  "center-defender": "Inara",
+  "goalie": "Gracelyn"
+}
 play_times {
-  "Ella": 25,
+  "Ella": 20,
   "Aymeri": 15,
-  "Evelyn": 20,
-  "Gracelyn": 25,
-  "Hartley": 20,
+  "Evelyn": 15,
+  "Gracelyn": 15,
+  "Hartley": 10,
   "Kara": 15,
-  "Lacey": 20,
-  "Lanae": 15,
+  "Lacey": 15,
+  "Lanae": 20,
   "Stella": 20,
   "Tegan": 15,
+  "Inara": 15
+}
+```
+# Final Play Times
+```
+play_times {
+  "Ella": 20,
+  "Aymeri": 20,
+  "Evelyn": 15,
+  "Gracelyn": 20,
+  "Hartley": 15,
+  "Kara": 15,
+  "Lacey": 20,
+  "Lanae": 20,
+  "Stella": 25,
+  "Tegan": 20,
   "Inara": 20
 }
 ```
