@@ -16,10 +16,10 @@ args = parser.parse_args()
 positions = [
     'left-forward',
     'right-forward',
-    'left-mid',
-    'right-mid',
     'left-defender',
     'right-defender',
+    'center-mid',
+    'center-defender',
     'goalie',
 ]
 
@@ -40,6 +40,8 @@ players = [
             'right-forward',
             'left-defender',
             'right-defender',
+            'center-defender',
+            'goalie',
         ],
         possible_positions=positions_other_than_goalie,
     ),
@@ -48,8 +50,9 @@ players = [
         preferred_positions=[
             'left-forward',
             'right-forward',
-            'left-mid',
-            'right-mid',
+            'left-defender',
+            'right-defender',
+            'center-mid',
         ],
         possible_positions=positions_other_than_goalie
     ),
@@ -58,18 +61,16 @@ players = [
         preferred_positions=[
             'left-forward',
             'right-forward',
-            'left-mid',
-            'right-mid',
+            'center-mid',
         ],
         possible_positions=positions_other_than_goalie
     ),
     Player(
         name='Gracelyn',
         preferred_positions=[
-            'left-forward',
-            'right-forward',
             'left-defender',
             'right-defender',
+            'center-defender',
             'goalie'
         ],
         possible_positions=positions,
@@ -79,18 +80,17 @@ players = [
         preferred_positions=[
             'left-forward',
             'right-forward',
-            'left-mid',
-            'right-mid',
+            'center-mid',
+            'center-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
     Player(
         name='Kara',
         preferred_positions=[
-            'left-mid',
-            'right-mid',
             'left-defender',
             'right-defender',
+            'center-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
@@ -99,8 +99,8 @@ players = [
         preferred_positions=[
             'left-forward',
             'right-forward',
-            'left-mid',
-            'right-mid',
+            'left-defender',
+            'right-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
@@ -109,41 +109,41 @@ players = [
         preferred_positions=[
             'left-forward',
             'right-forward',
-            'left-mid',
-            'right-mid',
+            'left-defender',
+            'right-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
     Player(
         name='Stella',
         preferred_positions=[
-            'left-mid',
-            'right-mid',
+            'left-forward',
+            'right-forward',
             'left-defender',
             'right-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
-    # Player(
-    #     name='Tegan',
-    #     preferred_positions=[
-    #         'left-mid',
-    #         'right-mid',
-    #         'left-defender',
-    #         'right-defender',
-    #     ],
-    #     possible_positions=positions_other_than_goalie
-    # ),
+    Player(
+        name='Tegan',
+        preferred_positions=[
+            'left-forward',
+            'right-forward',
+            'left-defender',
+            'right-defender',
+        ],
+        possible_positions=positions_other_than_goalie
+    ),
     Player(
         name='Inara',
         preferred_positions=[
-            'left-mid',
-            'right-mid',
+            'left-forward',
+            'right-forward',
             'left-defender',
             'right-defender',
-            'goalie'
+            'center-defender',
         ],
-        possible_positions=positions
+        possible_positions=positions_other_than_goalie
     ),
 ]
 
@@ -186,12 +186,15 @@ if args.goalie:
 
 slots_to_sub = [(pos, name) for pos, name in position_slots.items()]
 play_times = {p.name: p.play_time for p in players}
-slots_to_sub.sort(reverse=True, key=lambda x: play_times[x[1]] if x[1] else 1000000)
+# slots_to_sub.sort(reverse=True, key=lambda x: play_times[x[1]] if x[1] else 1000000)
+random.shuffle(slots_to_sub)
 available_players = [p for p in players if p.name not in position_slots.values()]
 random.shuffle(available_players)
 print('available_players', [p.name for p in available_players])
 # print('slots_to_sub', json.dumps(slots_to_sub,  indent=2))
+not_placed = []
 for player in available_players:
+    placed = False
     for pos, name in slots_to_sub:
         if pos == 'goalie':
             continue
@@ -200,7 +203,29 @@ for player in available_players:
             print(f"({player.name} --> {position_slots[pos]})")
             position_slots[pos] = player.name
             slots_to_sub.remove((pos, name))
+            placed = True
             break
+    if not placed:
+        not_placed.append(player)
+
+print('not placed', [p.name for p in not_placed])
+still_not_placed = []
+for player in not_placed:
+    placed = False
+    for pos, name in slots_to_sub:
+        if pos == 'goalie':
+            continue
+        current_player = player_dict[name] if name else None
+        if pos in player.possible_positions and (current_player is None or current_player.play_time >= player.play_time):
+            print(f"({player.name} --> {position_slots[pos]})")
+            position_slots[pos] = player.name
+            slots_to_sub.remove((pos, name))
+            placed = True
+            break
+    if not placed:
+        still_not_placed.append(player)
+
+print('still not placed', [p.name for p in still_not_placed])
 
 # random.shuffle(slots_to_sub)
 # for slot in slots_to_sub:
