@@ -52,15 +52,12 @@ players = [
             'right-forward',
             'left-defender',
             'right-defender',
-            'center-mid',
         ],
         possible_positions=positions_other_than_goalie
     ),
     Player(
         name='Evelyn',
         preferred_positions=[
-            'left-forward',
-            'right-forward',
             'center-mid',
         ],
         possible_positions=positions_other_than_goalie
@@ -78,10 +75,7 @@ players = [
     Player(
         name='Hartley',
         preferred_positions=[
-            'left-forward',
-            'right-forward',
             'center-mid',
-            'center-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
@@ -99,8 +93,6 @@ players = [
         preferred_positions=[
             'left-forward',
             'right-forward',
-            'left-defender',
-            'right-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
@@ -109,26 +101,19 @@ players = [
         preferred_positions=[
             'left-forward',
             'right-forward',
-            'left-defender',
-            'right-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
     Player(
         name='Stella',
         preferred_positions=[
-            'left-forward',
-            'right-forward',
-            'left-defender',
-            'right-defender',
+            'center-defender',
         ],
         possible_positions=positions_other_than_goalie
     ),
     Player(
         name='Tegan',
         preferred_positions=[
-            'left-forward',
-            'right-forward',
             'left-defender',
             'right-defender',
         ],
@@ -137,8 +122,6 @@ players = [
     Player(
         name='Inara',
         preferred_positions=[
-            'left-forward',
-            'right-forward',
             'left-defender',
             'right-defender',
             'center-defender',
